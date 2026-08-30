@@ -5,8 +5,11 @@ from dotenv import load_dotenv
 from google.genai.models import Models
 import streamlit as st
 
-load_dotenv("/Volumes/icebear/ai_chatbot/AI_app_scheduling_task/.env")
+load_dotenv()
 API_KEY = os.getenv("API_KEY")
+
+if not API_KEY and "API_KEY" in st.secrets:
+    API_KEY = st.secrets["API_KEY"]
 
 client = genai.Client(api_key = API_KEY)
 model_name = "gemini-3.5-flash-lite"
