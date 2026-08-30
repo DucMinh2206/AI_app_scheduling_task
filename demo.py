@@ -1,9 +1,14 @@
 import os
+import sys
 from google import genai
+from dotenv import load_dotenv
 from google.genai.models import Models
 import streamlit as st
 
-client = genai.Client(api_key = "AQ.Ab8RN6Jwurf0-btSeLAlIjPh_F9rlc5z5I8SJJbWaXtcLNgbZw")
+load_dotenv("/Volumes/icebear/ai_chatbot/.env")
+API_KEY = os.getenv("API_KEY")
+
+client = genai.Client(api_key = API_KEY)
 model_name = "gemini-3.5-flash-lite"
 
 contents = []
