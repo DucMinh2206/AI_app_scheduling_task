@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 from google.genai.models import Models
 import streamlit as st
 
-load_dotenv("/Volumes/icebear/ai_chatbot/.env")
+load_dotenv("/Volumes/icebear/ai_chatbot/AI_app_scheduling_task/.env")
 API_KEY = os.getenv("API_KEY")
 
 client = genai.Client(api_key = API_KEY)
@@ -122,5 +122,3 @@ if prompt:
     st.markdown(reply)
      
     
-
-  
