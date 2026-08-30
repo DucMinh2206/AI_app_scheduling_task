@@ -8,7 +8,7 @@ import streamlit as st
 API_KEY = st.secrets["API_KEY"]
 
 client = genai.Client(api_key = API_KEY)
-model_name = "gemini-3.1-flash-lite"
+model_name = "gemini-3.5-flash-lite"
 
 contents = []
 max_conversation_tokens = 1000
